@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tg-consumer-deployment
+  labels:
+    app: tgconsumer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tgconsumer
+  template:
+    metadata:
+      labels:
+        app: tgconsumer
+    spec:
+      containers:
+      - name: tgconsumer
+        image: 
+        ports:
+        - containerPort: 80
